@@ -1,0 +1,3 @@
+@import '../mixins/font-face';
+
+@include font-face('HelveticaNeue', '../../fonts/HelveticaNeue', 400, normal, ttf);
