@@ -21,3 +21,8 @@ Chat data are already fetched server side. Your move to transfer them to the cli
 You don't need to deploy your project for verification. You can push it in github or send us through a zip file. What is important for us is that we only need to use `yarn start` in order to see your work, nothing more.
 
 Start simple and go deep, that's how we work.
+
+### Rules and Evaluation
+- You're allowed to use any external ressource that you'ld like
+- After 3h you should send a zip of your project
+- Do spend some time to work on the extra points as we expect you to not only perform the basic implementation
