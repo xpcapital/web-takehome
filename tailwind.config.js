@@ -9,7 +9,7 @@ module.exports = {
       },
       colors: {
       },
-      height: {
+      height: {
         screen: 'calc(var(--vh) * 100)',
       },
       minHeight: {

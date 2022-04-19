@@ -1,8 +1,12 @@
-import 'styles/index.scss';
-
+import '../src/styles/globals.css'
 import Head from 'next/head';
-
 import useCssMobileHeight from 'hooks/useCssMobileHeight';
+import generateChats from 'data/chats';
+import generateUsers from 'data/users';
+import ChatInterface from 'types/chats';
+import MessageInterface from 'types/messages';
+import UserInterface from 'types/users';
+import ChatList from 'components/ChatList';
 
 function App({ Component, pageProps }) {
   useCssMobileHeight();

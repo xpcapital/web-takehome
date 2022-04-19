@@ -62,7 +62,7 @@ const generateChats = () => {
     }
   ];
 
-  return { chats, messages };
+  return { chats, messages };
 }
 
 export default generateChats;

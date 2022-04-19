@@ -2,11 +2,11 @@ import moment from 'moment';
 import MessageInterface from 'types/messages';
 
 const generateMessages = () => {
-  const uarticle = new Array("The", "A", "One", "Some", "Any"); 
-  const noun = new Array("boy", "girl", "dog", "town", "car"); 
-  const verb = new Array("drove", "jumped", "ran", "walked", "skipped"); 
-  const larticle = new Array("the", "a", "one", "some", "any"); 
-  const preposition = new Array("to", "from", "over", "under", "on"); 
+  const uarticle = new Array("The", "A", "One", "Some", "Any");
+  const noun = new Array("boy", "girl", "dog", "town", "car");
+  const verb = new Array("drove", "jumped", "ran", "walked", "skipped");
+  const larticle = new Array("the", "a", "one", "some", "any");
+  const preposition = new Array("to", "from", "over", "under", "on");
 
   const messages: MessageInterface[] = [
     {
@@ -120,13 +120,13 @@ const generateMessages = () => {
     const messagesCount = Math.floor(Math.random() * 40);
 
     for (let im = 2; im < messagesCount; im++) {
-      var rand1 = Math.floor(Math.random() * uarticle.length); 
-      var rand2 = Math.floor(Math.random() * noun.length); 
-      var rand3 = Math.floor(Math.random() * verb.length); 
-      var rand4 = Math.floor(Math.random() * preposition.length); 
-      var rand5 = Math.floor(Math.random() * larticle.length); 
-    
-      const sentence = uarticle[rand1] + " " + noun[rand2] + " " + verb[rand3] + " " + preposition[rand4] + " " + larticle[rand4] + " " + noun[rand5] + "."; 
+      var rand1 = Math.floor(Math.random() * uarticle.length);
+      var rand2 = Math.floor(Math.random() * noun.length);
+      var rand3 = Math.floor(Math.random() * verb.length);
+      var rand4 = Math.floor(Math.random() * preposition.length);
+      var rand5 = Math.floor(Math.random() * larticle.length);
+
+      const sentence = uarticle[rand1] + " " + noun[rand2] + " " + verb[rand3] + " " + preposition[rand4] + " " + larticle[rand4] + " " + noun[rand5] + ".";
 
       messages.push({
         id: `message_${i}0${im}`,
