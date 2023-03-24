@@ -1,8 +1,20 @@
-import 'styles/index.scss';
+import "styles/index.css";
 
-import Head from 'next/head';
+import Head from "next/head";
+import localFont from "next/font/local";
 
-import useCssMobileHeight from 'hooks/useCssMobileHeight';
+import useCssMobileHeight from "hooks/useCssMobileHeight";
+
+const helveticaNeue = localFont({
+  src: [
+    {
+      path: "../fonts/HelveticaNeue.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-helvetica-neue",
+});
 
 function App({ Component, pageProps }) {
   useCssMobileHeight();
@@ -15,7 +27,9 @@ function App({ Component, pageProps }) {
           content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover"
         />
       </Head>
-      <Component {...pageProps} key="main" />
+      <main className={`${helveticaNeue.variable} font-sans`}>
+        <Component {...pageProps} key="main" />
+      </main>
     </>
   );
 }

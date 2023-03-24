@@ -1,29 +1,33 @@
 module.exports = {
-  mode: 'jit',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './src/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./utils/**/*.{js,ts,jsx,tsx}",
+    "./flux/**/*.{js,ts,jsx,tsx}",
+    "./hooks/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['HelveticaNeue', 'sans-serif'],
+        sans: ["var(--font-helvetica-neue)", "sans-serif"],
       },
-      colors: {
-      },
-      height: {
-        screen: 'calc(var(--vh) * 100)',
+      colors: {},
+      height: {
+        screen: "calc(var(--vh) * 100)",
       },
       minHeight: {
-        screen: 'calc(var(--vh) * 100)',
-      }
+        screen: "calc(var(--vh) * 100)",
+      },
     },
     screens: {
-      'tablet': '640px',
-      'laptop': '1024px',
-      'desktop': '1280px',
+      tablet: "640px",
+      laptop: "1024px",
+      desktop: "1280px",
     },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+};

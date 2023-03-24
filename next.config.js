@@ -1,32 +1,28 @@
-const withImages = require('next-images');
-const path = require('path');
-
-module.exports = withImages({
-  fileExtensions: ["jpg", "jpeg", "png", "gif", "ico", "webp", "jp2", "avif"],
-  exclude: path.resolve(__dirname, 'src/icons'),
-  images: {
-    disableStaticImages: true
-  },
+module.exports = {
   webpack(config) {
     config.module.rules.push({
-      test: /\.svg$/,
-      use: ["@svgr/webpack"]
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
+      use: ["@svgr/webpack"],
     });
-
+    config.module.rules.push({
+      test: /\.worker\.js$/,
+      use: { loader: "worker-loader" },
+    });
     return config;
   },
   async headers() {
     return [
       {
-        source: '/:all*(svg|jpg|png)',
+        source: "/:all*(svg|jpg|png)",
         locale: false,
         headers: [
           {
-            key: 'Cache-Control',
-            value: 'public, max-age=300000, must-revalidate',
-          }
+            key: "Cache-Control",
+            value: "public, max-age=300000, must-revalidate",
+          },
         ],
       },
-    ]
+    ];
   },
-})
+};
