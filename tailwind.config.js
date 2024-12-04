@@ -13,12 +13,6 @@ module.exports = {
         sans: ["var(--font-helvetica-neue)", "sans-serif"],
       },
       colors: {},
-      height: {
-        screen: "calc(var(--vh) * 100)",
-      },
-      minHeight: {
-        screen: "calc(var(--vh) * 100)",
-      },
     },
     screens: {
       tablet: "640px",

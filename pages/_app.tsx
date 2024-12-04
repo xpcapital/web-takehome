@@ -3,8 +3,6 @@ import "styles/index.css";
 import Head from "next/head";
 import localFont from "next/font/local";
 
-import useCssMobileHeight from "hooks/useCssMobileHeight";
-
 const helveticaNeue = localFont({
   src: [
     {
@@ -17,8 +15,6 @@ const helveticaNeue = localFont({
 });
 
 function App({ Component, pageProps }) {
-  useCssMobileHeight();
-
   return (
     <>
       <Head>
